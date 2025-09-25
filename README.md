@@ -1,13 +1,12 @@
 # EIGRP-dynamic-routing
 EIGRP dynamic routing on three routers so that all LANs (192.168.1.0, 172.16.0.0, 192.168.2.0) can communicate with each other without manually adding static routes.
 
-
 The lab uses three routers connected in a triangle. Each router connects to a separate LAN via a switch:-
 
-R1 → 192.168.1.0/24 (PC0, PC1)
-R2 → 172.16.0.0/24 (PC2, PC3)
-R3 → 192.168.2.0/24 (PC4, PC5)
-Inter-router links: 10.0.0.0/30 and 20.0.0.0/30
+- -R1 → 192.168.1.0/24 (PC0, PC1)
+- -R2 → 172.16.0.0/24 (PC2, PC3)
+- -R3 → 192.168.2.0/24 (PC4, PC5)
+   Inter-router links: 10.0.0.0/30 and 20.0.0.0/30
 
 Commands configure EIGRP on the routers:-
 
