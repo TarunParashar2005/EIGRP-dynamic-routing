@@ -10,13 +10,11 @@ The lab uses three routers connected in a triangle. Each router connects to a se
 
 Commands configure EIGRP on the routers:-
 
-#router eigrp 100
-#network 192.168.1.0 0.0.0.255
-#network 10.0.0.0 0.0.0.3
-#no auto-summary
+- #router eigrp 100
+- #network 192.168.1.0 0.0.0.255
+- #network 10.0.0.0 0.0.0.3
+- #no auto-summary
 
-{router eigrp 100 → starts EIGRP with AS number 100
-network → advertises connected networks
 no auto-summary → avoids classful routing}
 
 Command to Verify that EIGRP is working:-
