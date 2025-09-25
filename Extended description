@@ -1,0 +1,23 @@
+EIGRP-dynamic-routing:-
+
+Objectives:
+- Configure EIGRP AS 100 between a central router and two edge routers. Validate DUAL operation and reachability across the 172.16 and 192.168 sites.
+
+Topology:
+- Connect center router R3 to the left and right ISR edges over the 10.0.0.0/30 and 20.0.0.0/30 networks. 
+- Use a center switch for the 172.16.0.0/24 LAN. The edges will host 192.168.1.0/24 and 192.168.2.0/24.
+
+Devices: 3 routers, 2 2960 switches, 6 PCs.
+
+Steps:
+- - router eigrp 100; no auto-summary; network 10.0.0.0 0.0.0.3; network 20.0.0.0 0.0.0.3; network 172.16.0.0 0.0.0.255; network 192.168.1.0 0.0.0.255; network 192.168.2.0 0.0.0.255; passive LANs.
+- - Optional: Use authentication with key chains. Adjust bandwidth and delay for metric demonstrations.
+
+Verify:
+- show ip eigrp neighbors; show ip eigrp topology; show ip route eigrp; ping hosts across the sites.
+
+Troubleshooting:
+- K-value mismatches or network statements that omit an interface can prevent adjacency. Ensure you have a common AS number.
+
+Expected outcome:
+- Stable neighbors, feasible successors where applicable, and successful end-to-end connectivity.
